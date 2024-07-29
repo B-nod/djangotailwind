@@ -1,0 +1,48 @@
+
+{% extends 'layouttail.html'%}
+{% load crispy_forms_tags %}
+{% block title%}
+<title>Ecommerce | User Profile</title>
+{% endblock%}
+
+{% block main_content%}
+<div class="container mx-auto p-6">
+    <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+     
+      <div class="text-center mt-2">
+        <h2 class="text-3xl font-semibold text-gray-800">{{user.username}}</h2>
+        <p class="text-gray-600">@johndoe</p>
+        
+       
+      </div>
+      <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-lg font-medium text-gray-800">Contact Information</h3>
+            <ul class="mt-2 text-gray-600">
+              <li class="flex items-center mt-2">
+                <span class="font-semibold w-28">Email:</span>
+                <span>john.doe@example.com</span>
+              </li>
+              <li class="flex items-center mt-2">
+                <span class="font-semibold w-28">Phone:</span>
+                <span>(123) 456-7890</span>
+              </li>
+              <li class="flex items-center mt-2">
+                <span class="font-semibold w-28">Location:</span>
+                <span>San Francisco, CA</span>
+              </li>
+            </ul>
+          </div>
+         
+        </div>
+        <div class="mt-5">
+            <input type="submit" class="bg-green-600 px-3 py-2 text-white rounded-tr-xl rounded-bl-xl" value="Update Profile">
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
